@@ -1,0 +1,7 @@
+# ROS 2 / colcon build artifacts
+build/
+install/
+log/
+
+# Local VS Code settings
+.vscode/
