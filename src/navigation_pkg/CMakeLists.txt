@@ -12,6 +12,9 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 if(BUILD_TESTING)
+  find_package(ament_cmake_pytest REQUIRED)
+  ament_add_pytest_test(test_navigation_logic test/test_navigation_logic.py TIMEOUT 30)
+
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
   # comment the line when a copyright and license is added to all source files
@@ -27,5 +30,18 @@ install(
   DIRECTORY maps
   DESTINATION share/${PROJECT_NAME}
 )
+
+# BEGIN HOSPITAL ROOM NAVIGATION
+install(PROGRAMS scripts/hospital_navigator.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME hospital_navigator
+)
+install(FILES config/hospital_rooms.yaml
+  DESTINATION share/${PROJECT_NAME}/config
+)
+install(FILES launch/hospital_navigator.launch.py
+  DESTINATION share/${PROJECT_NAME}/launch
+)
+# END HOSPITAL ROOM NAVIGATION
 
 ament_package()

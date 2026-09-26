@@ -17,8 +17,16 @@ ament_target_dependencies(dialogue_node
   std_msgs
 )
 
+add_executable(speech_interface_node src/speech_interface_node.cpp)
+
+ament_target_dependencies(speech_interface_node
+  rclcpp
+  std_msgs
+)
+
 install(TARGETS
   dialogue_node
+  speech_interface_node
   DESTINATION lib/${PROJECT_NAME}
 )
   #добавил дима
