@@ -1,0 +1,16 @@
+# Map coordinates in metres; yaw in radians. Frame: map.
+# Source: meoranka/hospital-robot-ros2, branch pavol-navigation, 2026-09-26.
+# Source PGM: 298 x 218 pixels, resolution 0.05 m/px,
+# YAML origin [-6.952, -5.435, 0]. Points are centres of free cells.
+# These are selected navigation destinations inside each numbered room.
+# They are NOT physical robot arrival measurements.
+frame_id: map
+rooms:
+  RoomCT:    {x: -1.927, y:  3.190, yaw: 0.0}  # 1, pixel (100,45)
+  RoomMid:   {x: -3.177, y: -0.060, yaw: 0.0}  # 2, pixel (75,110)
+  RoomMain:  {x: -4.927, y: -2.860, yaw: 0.0}  # 3, pixel (40,166)
+  Corridor:  {x:  1.073, y:  0.040, yaw: 0.0}  # 4, pixel (160,108)
+  RoomTL:    {x:  3.723, y:  3.590, yaw: 0.0}  # 5, pixel (213,37)
+  RoomTR:    {x:  5.773, y:  3.590, yaw: 0.0}  # 6, pixel (254,37)
+  RoomEnter: {x:  5.073, y: -0.210, yaw: 0.0}  # 7, pixel (240,113)
+  RoomAdmin: {x:  5.273, y: -3.810, yaw: 0.0}  # 8, pixel (244,185)

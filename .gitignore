@@ -5,3 +5,14 @@ log/
 
 # Local VS Code settings
 .vscode/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local installer backups and generated world with absolute mesh paths
+navigation_task_backups/
+worlds/hospital.sdf
+worlds/hospital.sdf.backup-*
+worlds/hospital.sdf.new
